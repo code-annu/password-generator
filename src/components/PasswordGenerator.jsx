@@ -29,8 +29,8 @@ function PasswordGenerator() {
     }, [length, includeNumbers, includeSymbols])
 
     function  onCopyPassword(){
-        console.log('yes clicked and passwordref is',passwordRef.current)
         passwordRef.current?.select()
+        window.navigator.clipboard.writeText(password);
     }
 
     return (
